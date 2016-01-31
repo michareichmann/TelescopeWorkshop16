@@ -16,7 +16,7 @@
 % END PREAMBEL
 \begin{document}
 % ============================
-% TITLE PAGE
+% BEGIN TITLE PAGE
 % ============================
 \begin{frame}
 	\begin{center}
@@ -40,8 +40,9 @@
 	\frametitle{Table of contents}
 	\tableofcontents[hideallsubsections]   % [pausesections]
 \end{frame}
+% END
 % ====================================================================================
-% MOTIVATION
+% BEGIN MOTIVATION
 % ====================================================================================
 \section{Motivation}
 \begin{frame}
@@ -53,20 +54,33 @@
 \end{frame}
 % new frame ============================
 \begin{frame}
+	\underline{\textbf{Goal:}}
+	\begin{itemize}
+		\item testing of different types of diamond sensors for rate dependence (up to $100$\,MHz)
+	\end{itemize}
 	\underline{\textbf{Conditions:}}
 	\begin{itemize}
-		\item testing of diamond pad and pixel detectors for rate dependence
-		\item continous pion beam with a flux of up to $100\,\z{MHz/cm}^{2}$ and momenta of $100$-$500$\,MeV
+		\item beam line PIM1 at PSI (Paul Scherrer institute)
+		\item continous pion beam with a flux of up to $10\,\z{MHz/cm}^{2}$ and momenta of $100$-$500$\,MeV
 	\end{itemize}
 	\underline{\textbf{Requirements:}}
 	\begin{itemize}
 		\item small, flexible and modular system
+		\begin{itemize}
+			\item reduce multiple scattering
+			\item easy to tear down, fast setup
+		\end{itemize}
 		\item high rate continuous data taking
-		\item adjustable trigger area to reduce pedestal events
+		\item scalable trigger area
+		\begin{itemize}
+			\item high efficiency in the DUT
+		\end{itemize}
+		\item precise trigger timing
 	\end{itemize}
 \end{frame}
+% END
 % ====================================================================================
-% TELESCOPE
+% BEGIN TELESCOPE
 % ====================================================================================
 \section{The Telescope}
 \begin{frame}
@@ -87,9 +101,31 @@
 	\begin{itemize}
 		\item $[0]$ DTB (Digital Test Board): interface to a computer
 		\item $[1]$ Motherboard: main frame of the telescope
-		\item $[2]$ Adapter Planes: mounting framework for the single pixel chips
+		\item $[2]$ Adapter Planes: interface to the single pixel chips
 		\item $[3]$ CMS Pixel Chip (analogue or digital)
 	\end{itemize}
+\end{frame}
+% ============================
+% CHIP OVERVIEW
+\subsection{CMS Pixel Chips}
+\setlength\extrarowheight{5pt}
+\begin{frame}
+	\frametitle{CMS Pixel Chips}
+	\begin{table}[ht]
+		\centering
+		\begin{tabularx}{.95\textwidth}{Xlll}
+									&\textbf{PSI46v2}					&\textbf{PSI46dig}					&\textbf{PROC600}					\\\noalign{\hrule height 2pt}
+			Chip size				&$7.9 \times 10.0$\,mm$^{2}$		&$7.9 \times 10.3$\,mm$^{2}$		&$7.9 \times 10.6$\,mm$^{2}$		\\\hline
+			Pixel size				&$150 \times 100$\,$\upmu$m$^{2}$	&$150 \times 100$\,$\upmu$m$^{2}$	&$150 \times 100$\,$\upmu$m$^{2}$	\\\hline
+			Pixel array				&$52 \times 80$						&$52 \times 80$						&$52 \times 80$						\\\hline
+			Pixel charge readout	&analogue							&digitised							&digitised							\\\hline
+			Readout					&multi level \@ $40$\,MHz			&$160$\,MBit/sec					&$160$\,MBit/sec					\\\hline
+			Hit rate				&$80$\,MHz/cm$^{2}$					&$120$\,MHz/cm$^{2}$				&$600$\,MHz/cm$^{2}$				\\\hline
+			Radiation Tolerance		&$200$\,kGy							&$1$\,MGy							&$6$\,MGy							\\\hline
+			In-time threshold		&$3500$\,e							&$<2000$\,e							&$<2000$\,e							\\\hline
+			Fast-OR trigger			&yes								&no									&yes								\\\hline
+		\end{tabularx}
+	\end{table}
 \end{frame}
 % ============================
 % MOTHERBOARD
@@ -107,36 +143,51 @@
 				\item $[1]$ input: SCSI connector to the DTB
 				\item $[2]$ sockets for the adapter planes
 				\item $[3]$ output (optional): SCSI connector to another motherboard
-				\item $[4]$ token jumpers: (blue = plane active, black = plane inactive) 
+				\begin{itemize}
+					\item daisy-chainable
+				\end{itemize}
+				\item $[4]$ token jumpers:
+				\begin{itemize}
+					\item blue\hspace{4pt} = plane used
+					\item black = plane skipped
+				\end{itemize}
 				\item $[5]$ output of the fast-OR trigger signal 
-				\item $[6]$ termination of the signals
 			\end{itemize}
 		\end{minipage}\no\s
 	\end{center}
 \end{frame}
 % ============================
-% PLANE
+% PLANES
 \subsection{Adapter Planes}
 \begin{frame}
 	\frametitle{Adapter Planes}
 	\begin{center}
-		\begin{minipage}{5.5cm}
+		\begin{minipage}{4cm}
 			\centering
 			\includegraphics[width=3.4cm]{Pics/AdapterAnalog}
 		\end{minipage}
 		\hspace*{2pt}
-		\begin{minipage}{5.5cm}
+		\begin{minipage}{7cm}
 			\centering
-			\includegraphics[width=2.8cm]{Pics/AdapterDigital}
+			\includegraphics[width=5.6cm]{Pics/AdapterDigital}
 		\end{minipage}
 	\end{center}
-	\begin{itemize}
-		\item $[1]$ SCSI connector to MB
-		\item $[2]$ CMS pixel chip
-		\item $[3]$ bit switch for I$^{2}$C address
-		\item $[4]$ amplifying circuit
-		\item $[5]$ sensor bias input
-	\end{itemize}
+	\begin{center}
+		\begin{minipage}{5.5cm}
+			\begin{itemize}
+				\item $[1]$ SCSI connector to MB
+				\item $[2]$ CMS pixel chip
+				\item $[3]$ bit switch for I$^{2}$C address
+			\end{itemize}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5.5cm}
+			\begin{itemize}
+				\item $[4]$ fast-OR amplifying circuit
+				\item $[5]$ sensor bias input
+			\end{itemize}
+		\end{minipage}
+	\end{center}
 \end{frame}
 % ============================
 % MODULARITY
@@ -148,15 +199,127 @@
 	\end{center}
 	\begin{itemize}
 		\item chain several motherboards together into a single big telescope
+		\item can only chain one chip type (analogue or digital)
 		\item number of planes per motherboard is also variable 
 	\end{itemize}
 \end{frame}
 % new frame ============================
 \begin{frame}
+	\frametitle{Diamond Pixel Setup}
+	\begin{minipage}{4cm}
+		\centering
+		\includegraphics[width=4cm]{fulltel_scint}
+	\end{minipage}
+	\hspace*{2pt}
+	\begin{minipage}{7cm}
+		\begin{itemize}
+			\item telescope: two motherboards with analogue chips 
+			\item DUT: single motherboard with diamonds sensors on digital chips
+			\item Scintillator: precise trigger timing  (fast-OR depends on clock, usually $40$\,MHz)
+			\item trigger: coincidence of the two planes closest to the DUT (red) and the scintillator
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+% END
+% ====================================================================================
+% BEGIN DATATAKING
+% ====================================================================================
+\section{Datataking}
+\begin{frame}
+	\begin{alertblock}{
+		\begin{center}
+			\Large{\textbf{Datataking}}
+		\end{center}}
+	\end{alertblock}
+\end{frame}
+% ============================
+% THE DIGITAL TESTBOARD
+\subsection{The DTB}
+\begin{frame}
+	\frametitle{The Digital Test-Board}
+	\begin{itemize}
+		\item FPGA including soft Token Bit Manager (TBM) emulator
+		\item clock and external trigger inputs
+		\item connectors: USB, low voltage and scsi 
+		\item LEMO high voltage input for biasing the sensors
+		\item internal ADC
+	\end{itemize}
 	\begin{center}
-		\includegraphics[width=8cm]{fulltel}
+		\begin{minipage}{5cm}
+			\centering
+			\begin{figure}
+				\caption{DTB inside}
+				\includegraphics[width=4.5cm]{Pics/dtb_inside}
+			\end{figure}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5cm}
+			\centering
+			\begin{figure}
+				\caption{DTB front and back}
+				\includegraphics[width=4.5cm]{Pics/DTB-Sides}
+			\end{figure}
+		\end{minipage}\no\s
 	\end{center}
 \end{frame}
+% ============================
+% PXAR
+\subsection{pXar}
+\begin{frame}
+	\frametitle{pXar}
+	\begin{center}
+		\includegraphics[width=3cm]{Pics/pxar_logo}
+	\end{center}
+	\begin{itemize}
+		\item short for Pixel eXpert Analysis Readout
+		\item software for communication between the telescope and a computer
+		\item pXar-core libraries: programming and readout information of the the CMS pixel chips
+		\item python CLI (Command Line Interface) to perform simple tests
+	\end{itemize}
+\end{frame}
+% ============================
+% EUDAQ
+\subsection{EUDAQ}
+\begin{frame}
+	\frametitle{EUDAQ}
+	\begin{itemize}
+		\item portable, modular and cross-platform DAQ framework
+		\item developed for the EUDET Pixel Telescope
+		\item can combine data streams from several different devices into an event based data stream
+		\item using pXar core libraries
+		\item adapting software to our purposes with help of DESY
+		\vspace*{1cm}
+		\item readout of diamond pad sensors with DRS4 Evalution Board
+		\begin{itemize}
+			\item adding a producer for the DRS4 as extension to EUDAQ
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+% ============================
+% TRIGGERLOGIC
+\subsection{Trigger logic}
+\begin{frame}
+	\frametitle{Trigger logic}
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[width=6cm]{Pics/triglog2}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5cm}
+			\begin{itemize}
+				\item coincidence between a fast-OR of planes before and after the DUT
+				\item AND of scintillator and fast-OR coincidence as trigger
+				\item global external clock with adjustable delays
+				\item busy signal after each trigger to avoid event misalignment
+				\begin{itemize}
+					\item useful for events with many pixels hit 
+				\end{itemize}
+			\end{itemize}
+		\end{minipage}\no\s
+	\end{center}
+\end{frame}
+% END
 % ====================================================================================
 % COMMISSIONING
 % ====================================================================================
@@ -183,35 +346,23 @@
 \subsection{WBC scan}
 \begin{frame}
 	\frametitle{WBC scan}
-\end{frame}
-% ====================================================================================
-% DATATAKING
-% ====================================================================================
-\section{Datataking}
-\begin{frame}
-	\begin{alertblock}{
-		\begin{center}
-			\Large{\textbf{Datataking}}
-		\end{center}}
-	\end{alertblock}
-\end{frame}
-% ============================
-% EUDAQ
-\subsection{EUDAQ}
-\begin{frame}
-	\frametitle{EUDAQ}
-\end{frame}
-% ============================
-% PXAR
-\subsection{PXAR}
-\begin{frame}
-	\frametitle{PXAR}
-\end{frame}
-% ============================
-% TRIGGERLOGIC
-\subsection{Trigger logic}
-\begin{frame}
-	\frametitle{Trigger logic}
+	\begin{center}
+		\begin{minipage}{4.0cm}
+			\centering
+			\includegraphics[width=4.0cm]{Pics/wbcscan1}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{7cm}
+			\begin{itemize}
+				\item ROC saves bunch crossing when particle hits the sensor
+				\item programmable setting called wbc (wait bunch crossing)
+				\item trigger only validates if time the trigger takes back to the ROC matches the wbc setting
+				\item automated wbc scan using the pXar CLI
+				\item detailed information about the hit yield (event has at least one hit) for every connected ROC
+				\item information of the trigger phase (relative timing of the trigger compared to the clock)
+			\end{itemize}
+		\end{minipage}\no\s
+	\end{center}
 \end{frame}
 % ====================================================================================
 % ANALYSIS
