@@ -1,0 +1,21 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {british}
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{The Telescope}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{General Setup}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Motherboard}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Adapter Planes}{8}{0}{2}
+\beamer@subsectionintoc {2}{4}{Modularity}{9}{0}{2}
+\beamer@sectionintoc {3}{Commissioning}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Inclusion of the analogue pixel chip}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{WBC scan}{14}{0}{3}
+\beamer@sectionintoc {4}{Datataking}{15}{0}{4}
+\beamer@subsectionintoc {4}{1}{EUDAQ}{16}{0}{4}
+\beamer@subsectionintoc {4}{2}{PXAR}{17}{0}{4}
+\beamer@subsectionintoc {4}{3}{Trigger logic}{18}{0}{4}
+\beamer@sectionintoc {5}{Analysis}{19}{0}{5}
+\beamer@subsectionintoc {5}{1}{Alignment}{20}{0}{5}
+\beamer@subsectionintoc {5}{2}{Tracking}{22}{0}{5}
+\beamer@subsectionintoc {5}{3}{Diamond Pads}{23}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{24}{0}{6}
+\beamer@sectionintoc {7}{Outlook}{26}{0}{7}
