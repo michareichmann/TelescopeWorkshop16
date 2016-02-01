@@ -56,19 +56,19 @@
 \begin{frame}
 	\underline{\textbf{Goal:}}
 	\begin{itemize}
-		\item testing of different types of diamond sensors for rate dependence (up to $100$\,MHz)
+		\item testing of different types of diamond sensors for rate dependence (up to fluxes of $10\,\z{MHz/cm}^{2}$)
 	\end{itemize}
 	\underline{\textbf{Conditions:}}
 	\begin{itemize}
 		\item beam line PIM1 at PSI (Paul Scherrer institute)
-		\item continous pion beam with a flux of up to $10\,\z{MHz/cm}^{2}$ and momenta of $100$-$500$\,MeV
+		\item continous pion beam with a flux of up to $10\,\z{MHz/cm}^{2}$ and momenta of $100$-$500$\,MeV/c
 	\end{itemize}
 	\underline{\textbf{Requirements:}}
 	\begin{itemize}
 		\item small, flexible and modular system
 		\begin{itemize}
-			\item reduce multiple scattering
-			\item easy to tear down, fast setup
+			\item reduce effects of multiple scattering
+			\item fast setup, easy to tear down, 
 		\end{itemize}
 		\item high rate continuous data taking
 		\item scalable trigger area
@@ -96,7 +96,7 @@
 \begin{frame}
 	\frametitle{General Setup}
 	\begin{center}
-		\includegraphics[width=8cm]{Pics/setup}
+		\includegraphics[width=7.8cm]{Pics/setup}
 	\end{center}
 	\begin{itemize}
 		\item $[0]$ DTB (Digital Test Board): interface to a computer
@@ -107,7 +107,7 @@
 \end{frame}
 % ============================
 % CHIP OVERVIEW
-\subsection{CMS Pixel Chips}
+\subsection{Parts}
 \setlength\extrarowheight{5pt}
 \begin{frame}
 	\frametitle{CMS Pixel Chips}
@@ -129,17 +129,17 @@
 \end{frame}
 % ============================
 % MOTHERBOARD
-\subsection{Motherboard}
 \begin{frame}
 	\frametitle{Motherboard}
 	\begin{center}
 		\begin{minipage}{4.6cm}
 			\centering
-			\includegraphics[width=4.5cm]{Pics/Motherboard}
+			\includegraphics[width=4.35cm]{Pics/Motherboard}
 		\end{minipage}
 		\hspace*{2pt}
-		\begin{minipage}{6cm}
+		\begin{minipage}[c][.7\textheight]{6cm}
 			\begin{itemize}
+				\setlength{\itemsep}{\fill}
 				\item $[1]$ input: SCSI connector to the DTB
 				\item $[2]$ sockets for the adapter planes
 				\item $[3]$ output (optional): SCSI connector to another motherboard
@@ -158,7 +158,6 @@
 \end{frame}
 % ============================
 % PLANES
-\subsection{Adapter Planes}
 \begin{frame}
 	\frametitle{Adapter Planes}
 	\begin{center}
@@ -211,14 +210,33 @@
 		\includegraphics[width=4cm]{fulltel_scint}
 	\end{minipage}
 	\hspace*{2pt}
-	\begin{minipage}{7cm}
+	\begin{minipage}[c][.7\textheight]{7cm}
 		\begin{itemize}
+			\setlength{\itemsep}{\fill}
 			\item telescope: two motherboards with analogue chips 
 			\item DUT: single motherboard with diamonds sensors on digital chips
 			\item Scintillator: precise trigger timing  (fast-OR depends on clock, usually $40$\,MHz)
 			\item trigger: coincidence of the two planes closest to the DUT (red) and the scintillator
 		\end{itemize}
 	\end{minipage}
+\end{frame}
+% new frame ============================
+\setlength\extrarowheight{5pt}
+\begin{frame}
+	\frametitle{Specification}
+	\begin{table}[ht]
+		\centering
+		\begin{tabularx}{.55\textwidth}{Xl}
+			\textbf{Spec}			&\textbf{Value}						\\\noalign{\hrule height 2pt}
+			Number of planes		& variable							\\\hline
+			Unit length				&$9.5$\,cm							\\\hline
+			Height					&$\approx12$\,cm					\\\hline
+			Width					&$14.5$\,cm							\\\hline
+			Maximum trigger area	&$150 \times 100$\,$\upmu$m$^{2}$	\\\hline
+			\multirow{2}{*}{X-Resolution at PSI} 	&$\approx50$\,$\upmu$m for pads		\\\cline{2-2}
+													&$\approx100$\,$\upmu$m	for pixel	\\\hline
+		\end{tabularx}
+	\end{table}
 \end{frame}
 % END
 % ====================================================================================
@@ -238,6 +256,7 @@
 \begin{frame}
 	\frametitle{The Digital Test-Board}
 	\begin{itemize}
+		\setlength{\itemsep}{\fill}
 		\item FPGA including soft Token Bit Manager (TBM) emulator
 		\item clock and external trigger inputs
 		\item connectors: USB, low voltage and scsi 
@@ -271,6 +290,7 @@
 		\includegraphics[width=3cm]{Pics/pxar_logo}
 	\end{center}
 	\begin{itemize}
+		\setlength{\itemsep}{\fill}
 		\item short for Pixel eXpert Analysis Readout
 		\item software for communication between the telescope and a computer
 		\item pXar-core libraries: programming and readout information of the the CMS pixel chips
@@ -283,6 +303,7 @@
 \begin{frame}
 	\frametitle{EUDAQ}
 	\begin{itemize}
+		\setlength{\itemsep}{\fill}
 		\item portable, modular and cross-platform DAQ framework
 		\item developed for the EUDET Pixel Telescope
 		\item can combine data streams from several different devices into an event based data stream
@@ -306,10 +327,12 @@
 			\includegraphics[width=6cm]{Pics/triglog2}
 		\end{minipage}
 		\hspace*{2pt}
-		\begin{minipage}{5cm}
+		\begin{minipage}[c][.7\textheight]{5cm}
 			\begin{itemize}
+				\setlength{\itemsep}{\fill}
 				\item coincidence between a fast-OR of planes before and after the DUT
 				\item AND of scintillator and fast-OR coincidence as trigger
+				\item OR with a low frequency pulser
 				\item global external clock with adjustable delays
 				\item busy signal after each trigger to avoid event misalignment
 				\begin{itemize}
@@ -321,7 +344,7 @@
 \end{frame}
 % END
 % ====================================================================================
-% COMMISSIONING
+% BEGIN COMMISSIONING
 % ====================================================================================
 \section{Commissioning}
 \begin{frame}
@@ -336,13 +359,25 @@
 \subsection{Inclusion of the analogue pixel chip}
 \begin{frame}
 	\frametitle{Inclusion of the analogue pixel chip}
-\end{frame}
-% new frame ============================
-\begin{frame}
-	\frametitle{Trigger and clock timing}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item analogue chips were read out with an Analogue Test Board (ATB)
+		\begin{itemize}
+			\item limited buffer size ($\rightarrow$ limited run time)
+		\end{itemize}
+		\item adapting pXar to use the DTB for the readout (thanks to Simon Spannagel)
+		\item need to adjust DTB timings:
+		\begin{itemize}
+			\item token delays to find the begin and the end of the waveform
+			\item clock offset to sample at the center of each peak of the waveform
+		\end{itemize}
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=8cm]{tbdelays}
+	\end{center}
 \end{frame}
 % ============================
-% MODULARITY
+% WBC SCAN
 \subsection{WBC scan}
 \begin{frame}
 	\frametitle{WBC scan}
@@ -352,8 +387,9 @@
 			\includegraphics[width=4.0cm]{Pics/wbcscan1}
 		\end{minipage}
 		\hspace*{2pt}
-		\begin{minipage}{7cm}
+		\begin{minipage}[c][.7\textheight]{7cm}
 			\begin{itemize}
+				\setlength{\itemsep}{\fill}
 				\item ROC saves bunch crossing when particle hits the sensor
 				\item programmable setting called wbc (wait bunch crossing)
 				\item trigger only validates if time the trigger takes back to the ROC matches the wbc setting
@@ -364,8 +400,9 @@
 		\end{minipage}\no\s
 	\end{center}
 \end{frame}
+% END
 % ====================================================================================
-% ANALYSIS
+% BEGIN ANALYSIS
 % ====================================================================================
 \section{Analysis}
 \begin{frame}
@@ -379,26 +416,69 @@
 % ALIGNMENT
 \subsection{Alignment}
 \begin{frame}
-	\frametitle{Plane alignment}
+	\frametitle{Event alignment}
+	\begin{center}
+		\begin{minipage}{5.5cm}
+			\centering
+			\begin{figure}
+				\includegraphics[width=4.4cm]{Pics/correlation2y}
+			\end{figure}
+			\begin{itemize}
+				\item compare x and y position of telescope and DUT
+			\end{itemize}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5.5cm}
+			\centering
+			\begin{figure}
+				\includegraphics[width=4.4cm]{Pics/EventAlignment}
+			\end{figure}
+			\begin{itemize}
+				\item use constant frequency pulser signal as reference
+				\item expect less pixel hits at pulser events
+			\end{itemize}
+		\end{minipage}
+	\end{center}
 \end{frame}
 % new frame ============================
 \begin{frame}
-	\frametitle{Event alignment}
+	\frametitle{Plane alignment}
+	\begin{minipage}[c][.4\textheight]{\textwidth}
+		\begin{itemize}
+			\setlength{\itemsep}{\fill}
+			\item iterative procedure from the PLT
+			\item moving track residuals to zero
+			\item first rotation around beam axis
+			\item translation in x-y plane perpendicular to the beam axis
+		\end{itemize}
+
+	\end{minipage}
+
 \end{frame}
 % ============================
-% TRACKING
-\subsection{Tracking}
+% MISCELLANEOUS
+\subsection{Miscellaneous}
 \begin{frame}
-	\frametitle{Tracking}
+	\begin{center}
+		\begin{minipage}{5.5cm}
+			\centering
+			\begin{figure}
+				\includegraphics[width=4.0cm]{Pics/PeakValues}
+			\end{figure}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5.5cm}
+			\centering
+			\begin{figure}
+				\includegraphics[width=4.0cm]{Pics/2DMap}
+			\end{figure}
+		\end{minipage}
+		\includegraphics[width=7cm]{WaveForms5000}
+	\end{center}
 \end{frame}
-% ============================
-% PADS
-\subsection{Diamond Pads}
-\begin{frame}
-	\frametitle{Diamond Pads}
-\end{frame}
+% END
 % ====================================================================================
-% CONCLUSION
+% BEGIN CONCLUSION
 % ====================================================================================
 \section{Conclusion}
 \begin{frame}
@@ -411,11 +491,24 @@
 % new frame ============================
 \begin{frame}
 	\begin{itemize}
-		\item
+		\vfill\item overcoming problems in the beginning
+		\begin{itemize}
+			\item finding a good design and testing the single components
+			\item readout of the analogue chip by the DTB 
+			\item adapting the softwares pXar and EUDAQ
+		\end{itemize}
+		\vfill\item great working telescope for our purposes
+		\begin{itemize}
+			\item reliable tracking and alignment
+			\item not fully working event alignment (can be fixed afterwards)
+		\end{itemize}
+		\vfill\item setup time atm about half a day
+		\vfill\item still room for improvement
 	\end{itemize}
 \end{frame}
+% END
 % ====================================================================================
-% OUTLOOK
+% BEGIN OUTLOOK
 % ====================================================================================
 \section{Outlook}
 \begin{frame}
@@ -428,19 +521,19 @@
 % new frame ============================
 \begin{frame}
 	\begin{itemize}
-		\item use the OSU TU (Trigger Unit) as single device to process all triggers
-		\item two preinstalled setups for pad and pixel tests
-		\item synchronise DTB clock with the beam clock at PSI ($40\rightarrow50$\,MHz)
-		\item save scintillator signal with the DRS4
+		\vfill\item use the OSU TU (Trigger Unit) as single device to process all triggers
+		\vfill\item two preinstalled setups for pad and pixel tests
+		\vfill\item synchronise DTB clock with the beam clock at PSI ($40\rightarrow50$\,MHz)
+		\vfill\item save scintillator signal with the DRS4
 		\begin{itemize}
 			\item particle identification by time of flight
 		\end{itemize}
-		\item increase resolution by tilting the telescope planes
-		\item using PROC600 as chip for the telescope
-		\item test PSI-ROC4SENS - a ROC without threshold
-
+		\vfill\item increase resolution by tilting the telescope planes
+		\vfill\item using PROC600 as chip for the telescope
+		\vfill\item test PSI-ROC4SENS - a ROC without threshold
 	\end{itemize}
 \end{frame}
+% END
 % ============================
 % DOCUMENT END
 \end{document}

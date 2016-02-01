@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.12.11)  31 JAN 2016 23:19
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.12.8)  1 FEB 2016 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -971,20 +971,23 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@cols=\count191
 \TX@ftn=\toks47
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen282
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count192
 \mult@box=\box70
-\multicol@leftmargin=\dimen282
+\multicol@leftmargin=\dimen283
 \c@unbalance=\count193
 \c@collectmore=\count194
 \doublecol@number=\count195
 \multicoltolerance=\count196
 \multicolpretolerance=\count197
-\full@width=\dimen283
-\page@free=\dimen284
-\premulticols=\dimen285
-\postmulticols=\dimen286
+\full@width=\dimen284
+\page@free=\dimen285
+\premulticols=\dimen286
+\postmulticols=\dimen287
 \multicolsep=\skip81
 \multicolbaselineskip=\skip82
 \partial@page=\box71
@@ -1012,16 +1015,16 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box93
 \c@columnbadness=\count198
 \c@finalcolumnbadness=\count199
-\last@try=\dimen287
-\multicolovershoot=\dimen288
-\multicolundershoot=\dimen289
+\last@try=\dimen288
+\multicolovershoot=\dimen289
+\multicolundershoot=\dimen290
 \mult@nat@firstbox=\box94
 \colbreak@box=\box95
 \multicol@sort@counter=\count200
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen290
-\WF@size=\dimen291
+\wrapoverhang=\dimen291
+\WF@size=\dimen292
 \c@WF@wrappedlines=\count201
 \WF@box=\box96
 \WF@everypar=\toks48
@@ -1263,25 +1266,18 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 ]
 File: Pics/setup.png Graphic file (type QTm)
 
-<use  "Pics/setup.png" >
-Overfull \vbox (1.03728pt too high) detected at line 107
- []
-
-[6
+<use  "Pics/setup.png" > [6
 
 ] [7
 
 ]
 File: Pics/Motherboard.png Graphic file (type QTm)
- <use  "Pics/Motherboard.png" >
-Overfull \vbox (4.8534pt too high) detected at line 158
- []
-
-[8
+ <use  "Pics/Motherboard.png" > [8
 
 ]
 File: Pics/AdapterAnalog.png Graphic file (type QTm)
- <use  "Pics/AdapterAnalog.png" >
+
+<use  "Pics/AdapterAnalog.png" >
 File: Pics/AdapterDigital.png Graphic file (type QTm)
  <use  "Pics/AdapterDigital.png" > [9
 
@@ -1297,29 +1293,36 @@ File: Pics/fulltel_scint.png Graphic file (type QTm)
 ] [12
 
 ]
-File: Pics/dtb_inside.png Graphic file (type QTm)
+[13
 
-<use  "Pics/dtb_inside.png" >
+]
+File: Pics/dtb_inside.png Graphic file (type QTm)
+ <use  "Pics/dtb_inside.png" >
 File: Pics/DTB-Sides.png Graphic file (type QTm)
- <use  "Pics/DTB-Sides.png" > [13
+ <use  "Pics/DTB-Sides.png" > [14
 
 ]
 File: Pics/pxar_logo.png Graphic file (type QTm)
 
-<use  "Pics/pxar_logo.png" > [14
+<use  "Pics/pxar_logo.png" > [15
 
-] [15
+] [16
 
 ]
 File: Pics/triglog2.png Graphic file (type QTm)
- <use  "Pics/triglog2.png" > [16
+ <use  "Pics/triglog2.png" > [17
 
 ]
-[17
+[18
 
-] [18
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 378.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 378.
 
-] [19
+File: Pics/tbdelays.png Graphic file (type QTm)
+ <use  "Pics/tbdelays.png" > [19
 
 ]
 File: Pics/wbcscan1.png Graphic file (type QTm)
@@ -1327,22 +1330,32 @@ File: Pics/wbcscan1.png Graphic file (type QTm)
 
 ] [21
 
-] [22
+]
+File: Pics/correlation2y.png Graphic file (type QTm)
 
-] [23
+<use  "Pics/correlation2y.png" >
+File: Pics/EventAlignment.png Graphic file (type QTm)
+ <use  "Pics/EventAlignment.png" > [22
 
-] [24
+]
+[23
+
+]
+File: Pics/PeakValues.png Graphic file (type QTm)
+ <use  "Pics/PeakValues.png" >
+File: Pics/2DMap.png Graphic file (type QTm)
+ <use  "Pics/2DMap.png" >
+File: Pics/WaveForms5000.png Graphic file (type QTm)
+
+<use  "Pics/WaveForms5000.png" > [24
 
 ] [25
 
-]
-[26
+] [26
 
 ] [27
 
 ] [28
-
-] [29
 
 ]
 \tf@nav=\write7
@@ -1354,20 +1367,21 @@ File: Pics/wbcscan1.png Graphic file (type QTm)
 \tf@snm=\write9
 \openout9 = `HighRateBeamTelescope.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
- (./HighRateBeamTelescope.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 446.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 446.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 446.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
+
+(./HighRateBeamTelescope.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 539.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 539.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 539.
  ) 
 Here is how much of TeX's memory you used:
- 25298 strings out of 493918
- 462680 string characters out of 6150562
- 550987 words of memory out of 5000000
- 28067 multiletter control sequences out of 15000+600000
- 50423 words of font info for 50 fonts, out of 8000000 for 9000
+ 25325 strings out of 493918
+ 463220 string characters out of 6150563
+ 549101 words of memory out of 5000000
+ 28082 multiletter control sequences out of 15000+600000
+ 54828 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  49i,19n,63p,10405b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HighRateBeamTelescope.pdf (29 pages).
+Output written on HighRateBeamTelescope.pdf (28 pages).

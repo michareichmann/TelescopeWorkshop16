@@ -3,21 +3,18 @@
 \beamer@sectionintoc {1}{Motivation}{3}{0}{1}
 \beamer@sectionintoc {2}{The Telescope}{5}{0}{2}
 \beamer@subsectionintoc {2}{1}{General Setup}{6}{0}{2}
-\beamer@subsectionintoc {2}{2}{CMS Pixel Chips}{7}{0}{2}
-\beamer@subsectionintoc {2}{3}{Motherboard}{8}{0}{2}
-\beamer@subsectionintoc {2}{4}{Adapter Planes}{9}{0}{2}
-\beamer@subsectionintoc {2}{5}{Modularity}{10}{0}{2}
-\beamer@sectionintoc {3}{Datataking}{12}{0}{3}
-\beamer@subsectionintoc {3}{1}{The DTB}{13}{0}{3}
-\beamer@subsectionintoc {3}{2}{pXar}{14}{0}{3}
-\beamer@subsectionintoc {3}{3}{EUDAQ}{15}{0}{3}
-\beamer@subsectionintoc {3}{4}{Trigger logic}{16}{0}{3}
-\beamer@sectionintoc {4}{Commissioning}{17}{0}{4}
-\beamer@subsectionintoc {4}{1}{Inclusion of the analogue pixel chip}{18}{0}{4}
+\beamer@subsectionintoc {2}{2}{Parts}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Modularity}{10}{0}{2}
+\beamer@sectionintoc {3}{Datataking}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{The DTB}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{pXar}{15}{0}{3}
+\beamer@subsectionintoc {3}{3}{EUDAQ}{16}{0}{3}
+\beamer@subsectionintoc {3}{4}{Trigger logic}{17}{0}{3}
+\beamer@sectionintoc {4}{Commissioning}{18}{0}{4}
+\beamer@subsectionintoc {4}{1}{Inclusion of the analogue pixel chip}{19}{0}{4}
 \beamer@subsectionintoc {4}{2}{WBC scan}{20}{0}{4}
 \beamer@sectionintoc {5}{Analysis}{21}{0}{5}
 \beamer@subsectionintoc {5}{1}{Alignment}{22}{0}{5}
-\beamer@subsectionintoc {5}{2}{Tracking}{24}{0}{5}
-\beamer@subsectionintoc {5}{3}{Diamond Pads}{25}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{26}{0}{6}
-\beamer@sectionintoc {7}{Outlook}{28}{0}{7}
+\beamer@subsectionintoc {5}{2}{Miscellaneous}{24}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{25}{0}{6}
+\beamer@sectionintoc {7}{Outlook}{27}{0}{7}
