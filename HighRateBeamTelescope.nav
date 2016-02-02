@@ -15,80 +15,84 @@
 \headcommand {\beamer@subsectionpages {3}{4}}
 \headcommand {\slideentry {2}{0}{5}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{6}{General Setup}}\headcommand {\beamer@subsectionpages {5}{5}}
-\headcommand {\slideentry {2}{1}{1}{6/6}{General Setup}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{6}{Telescope Module}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {2}{1}{1}{6/6}{Telescope Module}{0}}
 \headcommand {\beamer@framepages {6}{6}}
 \headcommand {\beamer@subsectionentry {0}{2}{2}{7}{Parts}}\headcommand {\beamer@subsectionpages {6}{6}}
 \headcommand {\slideentry {2}{2}{1}{7/7}{Parts}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {2}{2}{2}{8/8}{Parts}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{8}{Parts}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {2}{3}{1}{8/8}{Parts}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {2}{2}{3}{9/9}{Parts}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{9}{Setups}}\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\slideentry {2}{4}{1}{9/9}{Setups}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{10}{Modularity}}\headcommand {\beamer@subsectionpages {7}{9}}
-\headcommand {\slideentry {2}{3}{1}{10/10}{Modularity}{0}}
-\headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {2}{3}{2}{11/11}{Modularity}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {2}{3}{3}{12/12}{Modularity}{0}}
+\headcommand {\slideentry {2}{4}{2}{10/11}{Setups}{0}}
+\headcommand {\beamer@framepages {10}{11}}
+\headcommand {\slideentry {2}{4}{3}{12/12}{Setups}{0}}
 \headcommand {\beamer@framepages {12}{12}}
 \headcommand {\sectionentry {3}{Datataking}{13}{Datataking}{0}}
 \headcommand {\beamer@sectionpages {5}{12}}
-\headcommand {\beamer@subsectionpages {10}{12}}
+\headcommand {\beamer@subsectionpages {9}{12}}
 \headcommand {\slideentry {3}{0}{4}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{14}{The DTB}}\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\slideentry {3}{1}{1}{14/14}{The DTB}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{14}{EUDAQ}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {3}{1}{1}{14/14}{EUDAQ}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{15}{pXar}}\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\slideentry {3}{2}{1}{15/15}{pXar}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{15}{Trigger logic}}\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\slideentry {3}{2}{1}{15/15}{Trigger logic}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{16}{EUDAQ}}\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\slideentry {3}{3}{1}{16/16}{EUDAQ}{0}}
+\headcommand {\sectionentry {4}{Commissioning}{16}{Commissioning}{0}}
+\headcommand {\beamer@sectionpages {13}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {4}{0}{2}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{17}{Trigger logic}}\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\slideentry {3}{4}{1}{17/17}{Trigger logic}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{17}{Inclusion of the analogue pixel chip}}\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {4}{1}{1}{17/17}{Inclusion of the analogue pixel chip}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {4}{Commissioning}{18}{Commissioning}{0}}
-\headcommand {\beamer@sectionpages {13}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {4}{0}{2}{18/18}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{18}{WBC scan}}\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\slideentry {4}{2}{1}{18/18}{WBC scan}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{19}{Inclusion of the analogue pixel chip}}\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\slideentry {4}{1}{1}{19/19}{Inclusion of the analogue pixel chip}{0}}
+\headcommand {\sectionentry {5}{Analysis}{19}{Analysis}{0}}
+\headcommand {\beamer@sectionpages {16}{18}}
+\headcommand {\beamer@subsectionpages {18}{18}}
+\headcommand {\slideentry {5}{0}{2}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{20}{WBC scan}}\headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\slideentry {4}{2}{1}{20/20}{WBC scan}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{20}{Alignment}}\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\slideentry {5}{1}{1}{20/20}{Alignment}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\sectionentry {5}{Analysis}{21}{Analysis}{0}}
-\headcommand {\beamer@sectionpages {18}{20}}
-\headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\slideentry {5}{0}{2}{21/21}{}{0}}
+\headcommand {\slideentry {5}{1}{2}{21/21}{Alignment}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{22}{Alignment}}\headcommand {\beamer@subsectionpages {21}{21}}
-\headcommand {\slideentry {5}{1}{1}{22/22}{Alignment}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{22}{Miscellaneous}}\headcommand {\beamer@subsectionpages {20}{21}}
+\headcommand {\slideentry {5}{2}{1}{22/22}{Miscellaneous}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {5}{1}{2}{23/23}{Alignment}{0}}
+\headcommand {\sectionentry {6}{Conclusion}{23}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {19}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\slideentry {6}{0}{2}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{24}{Miscellaneous}}\headcommand {\beamer@subsectionpages {22}{23}}
-\headcommand {\slideentry {5}{2}{1}{24/24}{Miscellaneous}{0}}
+\headcommand {\slideentry {6}{0}{3}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\sectionentry {6}{Conclusion}{25}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {21}{24}}
-\headcommand {\beamer@subsectionpages {24}{24}}
-\headcommand {\slideentry {6}{0}{2}{25/25}{}{0}}
+\headcommand {\sectionentry {7}{Outlook}{25}{Outlook}{0}}
+\headcommand {\beamer@sectionpages {23}{24}}
+\headcommand {\beamer@subsectionpages {23}{24}}
+\headcommand {\slideentry {7}{0}{4}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {6}{0}{3}{26/26}{}{0}}
+\headcommand {\slideentry {7}{0}{5}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\sectionentry {7}{Outlook}{27}{Outlook}{0}}
+\headcommand {\sectionentry {8}{Backup}{27}{Backup}{0}}
 \headcommand {\beamer@sectionpages {25}{26}}
 \headcommand {\beamer@subsectionpages {25}{26}}
-\headcommand {\slideentry {7}{0}{4}{27/27}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{8}{1}{27}{Telescope Parts}}\headcommand {\beamer@subsectionpages {27}{26}}
+\headcommand {\slideentry {8}{1}{1}{27/27}{Telescope Parts}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {7}{0}{5}{28/28}{}{0}}
+\headcommand {\slideentry {8}{1}{2}{28/28}{Telescope Parts}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@partpages {1}{28}}
-\headcommand {\beamer@subsectionpages {27}{28}}
-\headcommand {\beamer@sectionpages {27}{28}}
-\headcommand {\beamer@documentpages {28}}
+\headcommand {\beamer@subsectionentry {0}{8}{2}{29}{The DTB}}\headcommand {\beamer@subsectionpages {27}{28}}
+\headcommand {\slideentry {8}{2}{1}{29/29}{The DTB}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@partpages {1}{29}}
+\headcommand {\beamer@subsectionpages {29}{29}}
+\headcommand {\beamer@sectionpages {27}{29}}
+\headcommand {\beamer@documentpages {29}}
 \headcommand {\def \inserttotalframenumber {28}}

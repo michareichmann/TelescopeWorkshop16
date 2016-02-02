@@ -56,19 +56,19 @@
 \begin{frame}
 	\underline{\textbf{Goal:}}
 	\begin{itemize}
-		\item testing of different types of diamond sensors for rate dependence (up to $100$\,MHz)
+		\item testing of different types of diamond sensors for rate dependence (up to fluxes of $10\,\z{MHz/cm}^{2}$)
 	\end{itemize}
 	\underline{\textbf{Conditions:}}
 	\begin{itemize}
 		\item beam line PIM1 at PSI (Paul Scherrer institute)
-		\item continous pion beam with a flux of up to $10\,\z{MHz/cm}^{2}$ and momenta of $100$-$500$\,MeV
+		\item continous pion beam with a flux of up to $10\,\z{MHz/cm}^{2}$ and momenta of $100$-$500$\,MeV/c
 	\end{itemize}
 	\underline{\textbf{Requirements:}}
 	\begin{itemize}
 		\item small, flexible and modular system
 		\begin{itemize}
-			\item reduce multiple scattering
-			\item easy to tear down, fast setup
+			\item reduce effects of multiple scattering
+			\item fast setup, easy to tear down, 
 		\end{itemize}
 		\item high rate continuous data taking
 		\item scalable trigger area
@@ -89,12 +89,23 @@
 			\Large{\textbf{The Telescope}}
 		\end{center}}
 	\end{alertblock}
+	\begin{center}
+		\begin{minipage}{5.5cm}
+			\centering
+			\includegraphics[height=4cm]{Pics/telescope2}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5.5cm}
+			\centering
+			\includegraphics[height=4cm]{Pics/telescope3}
+		\end{minipage}
+	\end{center}
 \end{frame}
 % ============================
 % GENERAL SETUP
-\subsection{General Setup}
+\subsection{Telescope Module}
 \begin{frame}
-	\frametitle{General Setup}
+	\frametitle{Telescope Module}
 	\begin{center}
 		\includegraphics[width=7.8cm]{Pics/setup}
 	\end{center}
@@ -115,128 +126,111 @@
 		\centering
 		\begin{tabularx}{.95\textwidth}{Xlll}
 									&\textbf{PSI46v2}					&\textbf{PSI46dig}					&\textbf{PROC600}					\\\noalign{\hrule height 2pt}
-			Chip size				&$7.9 \times 10.0$\,mm$^{2}$		&$7.9 \times 10.3$\,mm$^{2}$		&$7.9 \times 10.6$\,mm$^{2}$		\\\hline
-			Pixel size				&$150 \times 100$\,$\upmu$m$^{2}$	&$150 \times 100$\,$\upmu$m$^{2}$	&$150 \times 100$\,$\upmu$m$^{2}$	\\\hline
-			Pixel array				&$52 \times 80$						&$52 \times 80$						&$52 \times 80$						\\\hline
-			Pixel charge readout	&analogue							&digitised							&digitised							\\\hline
+			Chip size				&\multicolumn{3}{c}{$\approx 8\times10$\,mm$^{2}$}															\\\hline
+% 			Chip size				&$7.9 \times 10.0$\,mm$^{2}$		&$7.9 \times 10.3$\,mm$^{2}$		&$7.9 \times 10.6$\,mm$^{2}$		\\\hline
+			Pixel size				&\multicolumn{3}{c}{$150 \times 100$\,$\upmu$m$^{2}$}														\\\hline
+% 			Pixel size				&$150 \times 100$\,$\upmu$m$^{2}$	&$150 \times 100$\,$\upmu$m$^{2}$	&$150 \times 100$\,$\upmu$m$^{2}$	\\\hline
+			Pixel array				&\multicolumn{3}{c}{$52 \times 80$}																			\\\hline
+% 			Pixel array				&$52 \times 80$						&$52 \times 80$						&$52 \times 80$						\\\hline
+			\textbf{Pixel charge readout}	&\textbf{analogue}			&\textbf{digitised}					&d\textbf{igitised}					\\\hline
 			Readout					&multi level \@ $40$\,MHz			&$160$\,MBit/sec					&$160$\,MBit/sec					\\\hline
 			Hit rate				&$80$\,MHz/cm$^{2}$					&$120$\,MHz/cm$^{2}$				&$600$\,MHz/cm$^{2}$				\\\hline
-			Radiation Tolerance		&$200$\,kGy							&$1$\,MGy							&$6$\,MGy							\\\hline
-			In-time threshold		&$3500$\,e							&$<2000$\,e							&$<2000$\,e							\\\hline
-			Fast-OR trigger			&yes								&no									&yes								\\\hline
+			Radiation Tolerance		&$200$\,kGy							&$1$\,MGy							&$6$\,MGy (exp.)					\\\hline
+			\textbf{In-time threshold}		&$\mathbf{3500}$\,\textbf{e}&$\mathbf{\approx1500}$\,\textbf{e}	&$\mathbf{\approx1500}$\,\textbf{e}	\\\hline
+			\textbf{Fast-OR trigger}&\textbf{yes}						&\textbf{no}						&\textbf{yes}						\\\hline
 		\end{tabularx}
 	\end{table}
 \end{frame}
 % ============================
-% MOTHERBOARD
+% PARTS
+\subsection{Parts}
 \begin{frame}
-	\frametitle{Motherboard}
-	\begin{center}
-		\begin{minipage}{4.6cm}
-			\centering
-			\includegraphics[width=4.35cm]{Pics/Motherboard}
-		\end{minipage}
-		\hspace*{2pt}
-		\begin{minipage}[c][.7\textheight]{6cm}
-			\begin{itemize}
-				\setlength{\itemsep}{\fill}
-				\item $[1]$ input: SCSI connector to the DTB
-				\item $[2]$ sockets for the adapter planes
-				\item $[3]$ output (optional): SCSI connector to another motherboard
-				\begin{itemize}
-					\item daisy-chainable
-				\end{itemize}
-				\item $[4]$ token jumpers:
-				\begin{itemize}
-					\item blue\hspace{4pt} = plane used
-					\item black = plane skipped
-				\end{itemize}
-				\item $[5]$ output of the fast-OR trigger signal 
-			\end{itemize}
-		\end{minipage}\no\s
-	\end{center}
-\end{frame}
-% ============================
-% PLANES
-\begin{frame}
-	\frametitle{Adapter Planes}
-	\begin{center}
-		\begin{minipage}{4cm}
-			\centering
-			\includegraphics[width=3.4cm]{Pics/AdapterAnalog}
-		\end{minipage}
-		\hspace*{2pt}
-		\begin{minipage}{7cm}
-			\centering
-			\includegraphics[width=5.6cm]{Pics/AdapterDigital}
-		\end{minipage}
-	\end{center}
 	\begin{center}
 		\begin{minipage}{5.5cm}
-			\begin{itemize}
-				\item $[1]$ SCSI connector to MB
-				\item $[2]$ CMS pixel chip
-				\item $[3]$ bit switch for I$^{2}$C address
-			\end{itemize}
+			\centering
+			\includegraphics[height=6cm]{Pics/Motherboard1}
 		\end{minipage}
 		\hspace*{2pt}
 		\begin{minipage}{5.5cm}
-			\begin{itemize}
-				\item $[4]$ fast-OR amplifying circuit
-				\item $[5]$ sensor bias input
-			\end{itemize}
+			\centering
+			\includegraphics[height=7cm]{Pics/Adapters}
 		\end{minipage}
 	\end{center}
 \end{frame}
 % ============================
-% MODULARITY
-\subsection{Modularity}
+% SETUP
+\subsection{Setups}
 \begin{frame}
-	\frametitle{Modularity}
+	\frametitle{Schematic Setup}
 	\begin{center}
 		\includegraphics[width=8cm]{Modul}
 	\end{center}
 	\begin{itemize}
 		\item chain several motherboards together into a single big telescope
 		\item can only chain one chip type (analogue or digital)
-		\item number of planes per motherboard is also variable 
+		\item number of planes per motherboard is also variable ($1-3$)
 	\end{itemize}
 \end{frame}
 % new frame ============================
 \begin{frame}
 	\frametitle{Diamond Pixel Setup}
-	\begin{minipage}{4cm}
-		\centering
-		\includegraphics[width=4cm]{fulltel_scint}
-	\end{minipage}
-	\hspace*{2pt}
-	\begin{minipage}[c][.7\textheight]{7cm}
-		\begin{itemize}
-			\setlength{\itemsep}{\fill}
-			\item telescope: two motherboards with analogue chips 
-			\item DUT: single motherboard with diamonds sensors on digital chips
-			\item Scintillator: precise trigger timing  (fast-OR depends on clock, usually $40$\,MHz)
-			\item trigger: coincidence of the two planes closest to the DUT (red) and the scintillator
-		\end{itemize}
-	\end{minipage}
+	\begin{center}
+		\begin{minipage}{4cm}
+			\centering
+			\includegraphics[width=4cm]{fulltel_scint}
+		\end{minipage}
+% 		\hspace*{2pt}
+		\only<1>{
+		\hspace*{1pt}
+			\begin{minipage}[c][.7\textheight]{7cm}
+				\begin{itemize}
+					\setlength{\itemsep}{\fill}
+					\item telescope: two motherboards
+					\begin{itemize}
+						\item analogue chips 
+					\end{itemize}
+					\item DUT: single motherboard
+					\begin{itemize}
+						\item diamonds sensors on digital chips
+					\end{itemize}
+					\item scintillator: precise trigger timing  (fast-OR depends on clock, usually $40$\,MHz)
+					\item trigger: coincidence of the two planes closest to the DUT (red) and the scintillator
+				\end{itemize}
+			\end{minipage}}
+		\only<2>{
+			\begin{minipage}{7cm}
+				\centering
+				\includegraphics[width=6cm]{Pics/telescope2}
+			\end{minipage}}
+	\end{center}
 \end{frame}
 % new frame ============================
 \setlength\extrarowheight{5pt}
 \begin{frame}
 	\frametitle{Specification}
-	\begin{table}[ht]
-		\centering
-		\begin{tabularx}{.55\textwidth}{Xl}
-			\textbf{Spec}			&\textbf{Value}						\\\noalign{\hrule height 2pt}
-			Number of planes		& variable							\\\hline
-			Unit length				&$9.5$\,cm							\\\hline
-			Height					&$\approx12$\,cm					\\\hline
-			Width					&$14.5$\,cm							\\\hline
-			Maximum trigger area	&$150 \times 100$\,$\upmu$m$^{2}$	\\\hline
-			\multirow{2}{*}{X-Resolution at PSI} 	&$\approx50$\,$\upmu$m for pads		\\\cline{2-2}
-													&$\approx100$\,$\upmu$m	for pixel	\\\hline
-		\end{tabularx}
-	\end{table}
+	\begin{center}
+		\begin{minipage}{4cm}
+			\centering
+			\includegraphics[width=4cm]{dim2}
+		\end{minipage}
+		\begin{minipage}{7cm}
+			\begin{table}[ht]
+				\centering
+				\begin{tabularx}{.95\textwidth}{Xl}
+					\textbf{Spec}			&\textbf{Value}						\\\noalign{\hrule height 2pt}
+					Number of planes		&variable							\\\hline
+					Interplane distance		&$20.32$\,mm						\\\hline
+					Module length				&$9.5$\,cm							\\\hline
+					Height					&$\approx12$\,cm					\\\hline
+					Width					&$14.5$\,cm							\\\hline
+					Maximum trigger area	&$7.8 \times 8$\,mm$^{2}$			\\\hline
+					\multirow{2}{*}{Y-Resolution at PSI} 	&$\approx50$\,$\upmu$m for pads		\\\cline{2-2}
+															&$\approx100$\,$\upmu$m	for pixel	\\\hline
+				\end{tabularx}
+			\end{table}
+		\end{minipage}
+	\end{center}
+
 \end{frame}
 % END
 % ====================================================================================
@@ -249,37 +243,6 @@
 			\Large{\textbf{Datataking}}
 		\end{center}}
 	\end{alertblock}
-\end{frame}
-% ============================
-% THE DIGITAL TESTBOARD
-\subsection{The DTB}
-\begin{frame}
-	\frametitle{The Digital Test-Board}
-	\begin{itemize}
-		\setlength{\itemsep}{\fill}
-		\item FPGA including soft Token Bit Manager (TBM) emulator
-		\item clock and external trigger inputs
-		\item connectors: USB, low voltage and scsi 
-		\item LEMO high voltage input for biasing the sensors
-		\item internal ADC
-	\end{itemize}
-	\begin{center}
-		\begin{minipage}{5cm}
-			\centering
-			\begin{figure}
-				\caption{DTB inside}
-				\includegraphics[width=4.5cm]{Pics/dtb_inside}
-			\end{figure}
-		\end{minipage}
-		\hspace*{2pt}
-		\begin{minipage}{5cm}
-			\centering
-			\begin{figure}
-				\caption{DTB front and back}
-				\includegraphics[width=4.5cm]{Pics/DTB-Sides}
-			\end{figure}
-		\end{minipage}\no\s
-	\end{center}
 \end{frame}
 % ============================
 % PXAR
@@ -302,15 +265,23 @@
 \subsection{EUDAQ}
 \begin{frame}
 	\frametitle{EUDAQ}
+	\underline{\textbf{Software:}}
 	\begin{itemize}
 		\setlength{\itemsep}{\fill}
 		\item portable, modular and cross-platform DAQ framework
 		\item developed for the EUDET Pixel Telescope
 		\item can combine data streams from several different devices into an event based data stream
+		\item uses pXar as communication between the telescope and a computer
+	\end{itemize}
+	\underline{\textbf{Extension:}}
+	\begin{itemize}
+		\item readout of the analo
+	\end{itemize}
+
 		\item using pXar core libraries
 		\item adapting software to our purposes with help of DESY
 		\vspace*{1cm}
-		\item readout of diamond pad sensors with DRS4 Evalution Board
+		\item readout of diamond pad sensors with DRS4 Evaluation Board
 		\begin{itemize}
 			\item adding a producer for the DRS4 as extension to EUDAQ
 		\end{itemize}
@@ -402,7 +373,7 @@
 \end{frame}
 % END
 % ====================================================================================
-% ANALYSIS
+% BEGIN ANALYSIS
 % ====================================================================================
 \section{Analysis}
 \begin{frame}
@@ -476,6 +447,7 @@
 		\includegraphics[width=7cm]{WaveForms5000}
 	\end{center}
 \end{frame}
+% END
 % ====================================================================================
 % BEGIN CONCLUSION
 % ====================================================================================
@@ -531,6 +503,104 @@
 		\vfill\item using PROC600 as chip for the telescope
 		\vfill\item test PSI-ROC4SENS - a ROC without threshold
 	\end{itemize}
+\end{frame}
+% END
+% ====================================================================================
+% BEGIN BACKUP
+% ====================================================================================
+\section*{Backup}
+% ============================
+% MOTHERBOARD
+\subsection*{Telescope Parts}
+\begin{frame}
+	\frametitle{Motherboard}
+	\begin{center}
+		\begin{minipage}{4.6cm}
+			\centering
+			\includegraphics[width=4.35cm]{Pics/Motherboard}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}[c][.7\textheight]{6cm}
+			\begin{itemize}
+				\setlength{\itemsep}{\fill}
+				\item $[1]$ input: SCSI connector to the DTB
+				\item $[2]$ sockets for the adapter planes
+				\item $[3]$ output (optional): SCSI connector to another motherboard
+				\begin{itemize}
+					\item daisy-chainable
+				\end{itemize}
+				\item $[4]$ token jumpers:
+				\begin{itemize}
+					\item blue\hspace{4pt} = plane used
+					\item black = plane skipped
+				\end{itemize}
+				\item $[5]$ output of the fast-OR trigger signal 
+			\end{itemize}
+		\end{minipage}\no\s
+	\end{center}
+\end{frame}
+% ============================
+% PLANES
+\begin{frame}
+	\frametitle{Adapter Planes}
+	\begin{center}
+		\begin{minipage}{4cm}
+			\centering
+			\includegraphics[width=3.4cm]{Pics/AdapterAnalog}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{7cm}
+			\centering
+			\includegraphics[width=5.6cm]{Pics/AdapterDigital}
+		\end{minipage}
+	\end{center}
+	\begin{center}
+		\begin{minipage}{5.5cm}
+			\begin{itemize}
+				\item $[1]$ SCSI connector to MB
+				\item $[2]$ CMS pixel chip
+				\item $[3]$ bit switch for I$^{2}$C address
+			\end{itemize}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5.5cm}
+			\begin{itemize}
+				\item $[4]$ fast-OR amplifying circuit
+				\item $[5]$ sensor bias input
+			\end{itemize}
+		\end{minipage}
+	\end{center}
+\end{frame}
+% ============================
+% THE DIGITAL TESTBOARD
+\subsection*{The DTB}
+\begin{frame}
+	\frametitle{The Digital Test-Board}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item FPGA including soft Token Bit Manager (TBM) emulator
+		\item clock and external trigger inputs
+		\item connectors: USB, low voltage and scsi 
+		\item LEMO high voltage input for biasing the sensors
+		\item internal ADC
+	\end{itemize}
+	\begin{center}
+		\begin{minipage}{5cm}
+			\centering
+			\begin{figure}
+				\caption{DTB inside}
+				\includegraphics[width=4.5cm]{Pics/dtb_inside}
+			\end{figure}
+		\end{minipage}
+		\hspace*{2pt}
+		\begin{minipage}{5cm}
+			\centering
+			\begin{figure}
+				\caption{DTB front and back}
+				\includegraphics[width=4.5cm]{Pics/DTB-Sides}
+			\end{figure}
+		\end{minipage}\no\s
+	\end{center}
 \end{frame}
 % END
 % ============================
