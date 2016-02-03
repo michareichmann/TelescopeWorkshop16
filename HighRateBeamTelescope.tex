@@ -92,12 +92,12 @@
 	\begin{center}
 		\begin{minipage}{5.5cm}
 			\centering
-			\includegraphics[height=4cm]{Pics/telescope2}
+			\includegraphics[height=4.5cm]{Pics/telescope2}
 		\end{minipage}
 		\hspace*{2pt}
 		\begin{minipage}{5.5cm}
 			\centering
-			\includegraphics[height=4cm]{Pics/telescope3}
+			\includegraphics[height=4.5cm]{Pics/telescope3}
 		\end{minipage}
 	\end{center}
 \end{frame}
@@ -230,7 +230,6 @@
 			\end{table}
 		\end{minipage}
 	\end{center}
-
 \end{frame}
 % END
 % ====================================================================================
@@ -270,10 +269,42 @@
 	\end{itemize}
 \end{frame}
 % ============================
-% TRIGGERLOGIC
-\subsection{Trigger logic}
+% TRIGGER
+\subsection{Trigger}
 \begin{frame}
-	\frametitle{Trigger logic}
+	\frametitle{Trigger}
+	\underline{\textbf{Requirements:}}\s
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item guarantee DUT hit
+		\begin{itemize}
+			\item use coincidence of the fast-ORs from the planes directly before and after the DUT
+		\end{itemize}
+		\item scalable trigger
+		\begin{itemize}
+			\item mask pixels of correspondent trigger planes
+		\end{itemize}
+		\item exact timing
+		\begin{itemize}
+			\item coincidence with a fast scintillator
+		\end{itemize}
+		\item event alignment
+		\begin{itemize}
+			\item EUDAQ Trigger Logic Unit (TLU)
+		\end{itemize}
+	\end{itemize}
+	\vspace*{.5cm}
+	\underline{\textbf{Addition for pads:}}\s
+	\begin{itemize}
+		\item constant low frequency pulser as stable reference signal
+		\begin{itemize}
+			\item OR with pulser and particle trigger
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+% new frame ============================
+\begin{frame}
+	\frametitle{Trigger Logic}
 	\begin{center}
 		\begin{minipage}{6cm}
 			\centering
@@ -283,14 +314,14 @@
 		\begin{minipage}[c][.7\textheight]{5cm}
 			\begin{itemize}
 				\setlength{\itemsep}{\fill}
-				\item coincidence between a fast-OR of planes before and after the DUT
-				\item AND of scintillator and fast-OR coincidence as trigger
-				\item OR with a low frequency pulser
-				\item global external clock with adjustable delays
-				\item busy signal after each trigger to avoid event misalignment
+				\onslide<2->{\item fast-OR coincidence}
+				\onslide<3->{\item coincidence with scintillator}
+				\onslide<4->{\item OR with pulser}
+				\onslide<5->{\item global external clock with adjustable delays}
+				\onslide<6->{\item busy signal after each trigger to avoid event misalignment
 				\begin{itemize}
 					\item useful for events with many pixels hit 
-				\end{itemize}
+				\end{itemize}}
 			\end{itemize}
 		\end{minipage}\no\s
 	\end{center}
@@ -308,28 +339,6 @@
 	\end{alertblock}
 \end{frame}
 % ============================
-% ANALOGUE CHIP
-\subsection{Inclusion of the analogue pixel chip}
-\begin{frame}
-	\frametitle{Inclusion of the analogue pixel chip}
-	\begin{itemize}
-		\setlength{\itemsep}{\fill}
-		\item analogue chips were read out with an Analogue Test Board (ATB)
-		\begin{itemize}
-			\item limited buffer size ($\rightarrow$ limited run time)
-		\end{itemize}
-		\item adapting pXar to use the DTB for the readout (thanks to Simon Spannagel)
-		\item need to adjust DTB timings:
-		\begin{itemize}
-			\item token delays to find the begin and the end of the waveform
-			\item clock offset to sample at the center of each peak of the waveform
-		\end{itemize}
-	\end{itemize}
-	\begin{center}
-		\includegraphics[width=8cm]{tbdelays}
-	\end{center}
-\end{frame}
-% ============================
 % WBC SCAN
 \subsection{WBC scan}
 \begin{frame}
@@ -337,7 +346,7 @@
 	\begin{center}
 		\begin{minipage}{4.0cm}
 			\centering
-			\includegraphics[width=4.0cm]{Pics/wbcscan1}
+			\includegraphics[width=4.0cm]{Pics/wbcscan2}
 		\end{minipage}
 		\hspace*{2pt}
 		\begin{minipage}[c][.7\textheight]{7cm}
@@ -347,29 +356,66 @@
 				\item programmable setting called wbc (wait bunch crossing)
 				\item trigger only validates if time the trigger takes back to the ROC matches the wbc setting
 				\item automated wbc scan using the pXar CLI
-				\item detailed information about the hit yield (event has at least one hit) for every connected ROC
-				\item information of the trigger phase (relative timing of the trigger compared to the clock)
 			\end{itemize}
 		\end{minipage}\no\s
 	\end{center}
 \end{frame}
-% END
-% ====================================================================================
-% BEGIN ANALYSIS
-% ====================================================================================
-\section{Analysis}
+% new frame ============================
 \begin{frame}
-	\begin{alertblock}{
-		\begin{center}
-			\Large{\textbf{Analysis}}
-		\end{center}}
-	\end{alertblock}
+	\frametitle{Efficiency Optimisation}
+	\begin{center}
+		\begin{minipage}{3cm}
+			\centering
+			\includegraphics[width=3cm]{ClockCycle}
+		\end{minipage}
+		\begin{minipage}{8cm}
+			\centering
+			\includegraphics[height=3.5cm]{Pics/optimisation}
+		\end{minipage}
+	\end{center}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item wbc scan also yields:
+			\begin{itemize}
+				\item detailed information about the hit yield for every connected ROC
+				\item information of the trigger phase (relative timing of the trigger compared to the clock)
+			\end{itemize}
+		\item first use trigger delay to shift the the trigger in the middle of the clock
+		\item shift trigger and external clock delay together
+		\begin{itemize}
+			\item leaves trigger phase constant
+			\item find optimal efficiency relative to the telescope clock
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 % ============================
 % ALIGNMENT
 \subsection{Alignment}
 \begin{frame}
 	\frametitle{Event alignment}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item two event streams (telescope and DUT)
+		\item event alignment has to be guaranteed to make use of tracking
+		\item DRS4 board has no event counter
+		\item using busy signal of the DRS4 as handshake for the TLU
+		\item no handshake for the DTB yet (but in progress)
+		\item control event alignment in online analysis
+	\end{itemize}
+\end{frame}
+% END
+% ====================================================================================
+% BEGIN ANALYSIS
+% ====================================================================================
+\section{Analysis}
+% ============================
+% ALIGNMENT
+\subsection{Alignment}
+\begin{frame}
+	\begin{alertblock}{
+		\centering
+		\Large{\textbf{Analysis}}}
+	\end{alertblock}
 	\begin{center}
 		\begin{minipage}{5.5cm}
 			\centering
@@ -396,39 +442,40 @@
 % new frame ============================
 \begin{frame}
 	\frametitle{Plane alignment}
-	\begin{minipage}[c][.4\textheight]{\textwidth}
-		\begin{itemize}
-			\setlength{\itemsep}{\fill}
-			\item iterative procedure from the PLT
-			\item moving track residuals to zero
-			\item first rotation around beam axis
-			\item translation in x-y plane perpendicular to the beam axis
-		\end{itemize}
-
-	\end{minipage}
-
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[width=5cm]{Residual}\\
+			\includegraphics[width=6cm]{Track}
+		\end{minipage}
+		\begin{minipage}[c][.5\textheight]{5cm}
+			\begin{itemize}
+				\setlength{\itemsep}{\fill}
+				\item iterative procedure written by Gregor Kasieczka using the PLT framework
+				\item moving track residuals to zero
+				\item first rotation around beam axis
+				\item translation in x-y plane perpendicular to the beam axis
+			\end{itemize}
+		\end{minipage}
+	\end{center}
 \end{frame}
 % ============================
 % MISCELLANEOUS
 \subsection{Miscellaneous}
 \begin{frame}
 	\begin{center}
-		\begin{minipage}{5.5cm}
-			\centering
-			\begin{figure}
-				\includegraphics[width=4.0cm]{Pics/PeakValues}
-			\end{figure}
-		\end{minipage}
-		\hspace*{2pt}
-		\begin{minipage}{5.5cm}
-			\centering
-			\begin{figure}
-				\includegraphics[width=4.0cm]{Pics/2DMap}
-			\end{figure}
-		\end{minipage}
-		\includegraphics[width=7cm]{WaveForms5000}
+		\includegraphics[width=5cm]{SingleWF}\\
+		\includegraphics[width=5cm]{WaveForms5000}\\
+		\includegraphics[width=5cm]{Pics/PeakValues}
 	\end{center}
 \end{frame}
+% new frame ============================
+\begin{frame}
+	\begin{center}
+		\includegraphics[width=7.0cm]{Pics/2DMap}
+	\end{center}
+\end{frame}
+
 % END
 % ====================================================================================
 % BEGIN CONCLUSION
@@ -444,19 +491,20 @@
 % new frame ============================
 \begin{frame}
 	\begin{itemize}
-		\vfill\item overcoming problems in the beginning
+		\setlength{\itemsep}{\fill}
+		\item overcoming problems in the beginning
 		\begin{itemize}
 			\item finding a good design and testing the single components
 			\item readout of the analogue chip by the DTB 
-			\item adapting the softwares pXar and EUDAQ
+			\item extending the softwares pXar and EUDAQ
 		\end{itemize}
-		\vfill\item great working telescope for our purposes
+		\item great working telescope for our purposes
 		\begin{itemize}
 			\item reliable tracking and alignment
-			\item not fully working event alignment (can be fixed afterwards)
+			\item a few runs still have event misalignment (can be fixed offline)
 		\end{itemize}
-		\vfill\item setup time atm about half a day
-		\vfill\item still room for improvement
+		\item setup time currently about half a day
+		\item still room for improvement
 	\end{itemize}
 \end{frame}
 % END
@@ -466,24 +514,41 @@
 \section{Outlook}
 \begin{frame}
 	\begin{alertblock}{
-		\begin{center}
-			\Large{\textbf{Outlook}}
-		\end{center}}
+		\centering
+		\Large{\textbf{Outlook}}}		                        
 	\end{alertblock}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item merge trigger logic into single device (Trigger Unit)
+		\begin{itemize}
+			\item currently testing a TU from OSU
+		\end{itemize}
+		\item two preinstalled setups for pad and pixel tests
+		\item synchronise DTB clock with the beam clock at PSI ($40\rightarrow50$\,MHz)
+		\item save scintillator signal with the DRS4
+		\begin{itemize}
+			\item more precise trigger timing
+			\item particle identification by time of flight
+		\end{itemize}
+		\item increasing resolution
+		\begin{itemize}
+			\item try tilting the planes (more charge sharing)
+			\item reduce material
+		\end{itemize}
+		\item testing PROC600 as telescope chip with trigger as well as DUT
+		\item testing PSI-ROC4SENS (chip without threshold) as DUT
+	\end{itemize}
 \end{frame}
 % new frame ============================
 \begin{frame}
+	\underline{\textbf{Special Thanks to:}}\as
 	\begin{itemize}
-		\vfill\item use the OSU TU (Trigger Unit) as single device to process all triggers
-		\vfill\item two preinstalled setups for pad and pixel tests
-		\vfill\item synchronise DTB clock with the beam clock at PSI ($40\rightarrow50$\,MHz)
-		\vfill\item save scintillator signal with the DRS4
-		\begin{itemize}
-			\item particle identification by time of flight
-		\end{itemize}
-		\vfill\item increase resolution by tilting the telescope planes
-		\vfill\item using PROC600 as chip for the telescope
-		\vfill\item test PSI-ROC4SENS - a ROC without threshold
+		\setlength{\itemsep}{\fill}
+		\item the DESY people for helping us with the the EUDAQ framework
+		\item Simon Spannagel for the insights in pXar and its analogue extension as well as immediate help during beam tests
+		\item the Horisberger group at PSI for advice concerning the pixel chips
+		\item David ... for the information about the PSI facilities
+		\item $\hdots$
 	\end{itemize}
 \end{frame}
 % END
@@ -495,6 +560,7 @@
 % MOTHERBOARD
 \subsection*{Telescope Parts}
 \begin{frame}
+	\addtocounter{framenumber}{-1}
 	\frametitle{Motherboard}
 	\begin{center}
 		\begin{minipage}{4.6cm}
@@ -524,6 +590,7 @@
 % ============================
 % PLANES
 \begin{frame}
+	\addtocounter{framenumber}{-1}
 	\frametitle{Adapter Planes}
 	\begin{center}
 		\begin{minipage}{4cm}
@@ -554,9 +621,33 @@
 	\end{center}
 \end{frame}
 % ============================
+% ANALOGUE CHIP
+\subsection{Inclusion of the analogue pixel chip}
+\begin{frame}
+	\addtocounter{framenumber}{-1}
+	\frametitle{Inclusion of the analogue pixel chip}
+	\begin{itemize}
+		\setlength{\itemsep}{\fill}
+		\item analogue chips were read out with an Analogue Test Board (ATB)
+		\begin{itemize}
+			\item limited buffer size ($\rightarrow$ limited run time)
+		\end{itemize}
+		\item adapting pXar to use the DTB for the readout (thanks to Simon Spannagel)
+		\item need to adjust DTB timings:
+		\begin{itemize}
+			\item token delays to find the begin and the end of the waveform
+			\item clock offset to sample at the center of each peak of the waveform
+		\end{itemize}
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=8cm]{tbdelays}
+	\end{center}
+\end{frame}
+% ============================
 % THE DIGITAL TESTBOARD
 \subsection*{The DTB}
 \begin{frame}
+	\addtocounter{framenumber}{-1}
 	\frametitle{The Digital Test-Board}
 	\begin{itemize}
 		\setlength{\itemsep}{\fill}

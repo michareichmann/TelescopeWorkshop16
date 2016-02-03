@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.12.11)  2 FEB 2016 13:00
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.12.8)  2 FEB 2016 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1307,72 +1307,116 @@ File: Pics/dim2.png Graphic file (type QTm)
 ] [14
 
 ]
+[15
+
+]
+File: Pics/triglog2.png Graphic file (type QTm)
+ <use  "Pics/triglog2.png" > [16
+
+]
+File: Pics/triglog2.png Graphic file (type QTm)
+ <use  "Pics/triglog2.png" > [17
+
+]
 File: Pics/triglog2.png Graphic file (type QTm)
 
-<use  "Pics/triglog2.png" > [15
-
-] [16
+<use  "Pics/triglog2.png" > [18
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 331.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 331.
-
-File: Pics/tbdelays.png Graphic file (type QTm)
- <use  "Pics/tbdelays.png" > [17
+File: Pics/triglog2.png Graphic file (type QTm)
+ <use  "Pics/triglog2.png" > [19
 
 ]
-File: Pics/wbcscan1.png Graphic file (type QTm)
+File: Pics/triglog2.png Graphic file (type QTm)
 
-<use  "Pics/wbcscan1.png" > [18
+<use  "Pics/triglog2.png" > [20
 
-] [19
+]
+File: Pics/triglog2.png Graphic file (type QTm)
+ <use  "Pics/triglog2.png" > [21
+
+] [22
+
+]
+File: Pics/wbcscan2.png Graphic file (type QTm)
+
+<use  "Pics/wbcscan2.png" > [23
+
+]
+File: Pics/ClockCycle.png Graphic file (type QTm)
+ <use  "Pics/ClockCycle.png" >
+File: Pics/optimisation.png Graphic file (type QTm)
+
+<use  "Pics/optimisation.png" > [24
+
+] [25
 
 ]
 File: Pics/correlation2y.png Graphic file (type QTm)
  <use  "Pics/correlation2y.png" >
 File: Pics/EventAlignment.png Graphic file (type QTm)
 
-<use  "Pics/EventAlignment.png" > [20
+<use  "Pics/EventAlignment.png" >
+Overfull \vbox (1.04628pt too high) detected at line 441
+ []
 
-] [21
+[26
 
 ]
-File: Pics/PeakValues.png Graphic file (type QTm)
- <use  "Pics/PeakValues.png" >
-File: Pics/2DMap.png Graphic file (type QTm)
+File: Pics/Residual.png Graphic file (type QTm)
+ <use  "Pics/Residual.png" >
+File: Pics/Track.png Graphic file (type QTm)
+ <use  "Pics/Track.png" > [27
 
-<use  "Pics/2DMap.png" >
+]
+File: Pics/SingleWF.png Graphic file (type QTm)
+
+<use  "Pics/SingleWF.png" >
 File: Pics/WaveForms5000.png Graphic file (type QTm)
- <use  "Pics/WaveForms5000.png" > [22
+ <use  "Pics/WaveForms5000.png" >
+File: Pics/PeakValues.png Graphic file (type QTm)
 
-] [23
-
-] [24
+<use  "Pics/PeakValues.png" > [28
 
 ]
-[25
+File: Pics/2DMap.png Graphic file (type QTm)
+ <use  "Pics/2DMap.png" > [29
 
-] [26
+] [30
+
+] [31
+
+]
+[32
+
+] [33
 
 ]
 File: Pics/Motherboard.png Graphic file (type QTm)
- <use  "Pics/Motherboard.png" > [27
+ <use  "Pics/Motherboard.png" > [34
 
 ]
 File: Pics/AdapterAnalog.png Graphic file (type QTm)
  <use  "Pics/AdapterAnalog.png" >
 File: Pics/AdapterDigital.png Graphic file (type QTm)
 
-<use  "Pics/AdapterDigital.png" > [28
+<use  "Pics/AdapterDigital.png" > [35
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 645.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 645.
+
+File: Pics/tbdelays.png Graphic file (type QTm)
+ <use  "Pics/tbdelays.png" > [36
 
 ]
 File: Pics/dtb_inside.png Graphic file (type QTm)
- <use  "Pics/dtb_inside.png" >
-File: Pics/DTB-Sides.png Graphic file (type QTm)
 
-<use  "Pics/DTB-Sides.png" > [29
+<use  "Pics/dtb_inside.png" >
+File: Pics/DTB-Sides.png Graphic file (type QTm)
+ <use  "Pics/DTB-Sides.png" > [37
 
 ]
 \tf@nav=\write7
@@ -1384,20 +1428,21 @@ File: Pics/DTB-Sides.png Graphic file (type QTm)
 \tf@snm=\write9
 \openout9 = `HighRateBeamTelescope.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 590.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 590.
- (./HighRateBeamTelescope.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 590.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 590.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 590.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 681.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 681.
+
+(./HighRateBeamTelescope.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 681.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 681.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 681.
  ) 
 Here is how much of TeX's memory you used:
- 25340 strings out of 493918
- 463417 string characters out of 6150562
- 548500 words of memory out of 5000000
- 28093 multiletter control sequences out of 15000+600000
+ 25360 strings out of 493918
+ 463667 string characters out of 6150563
+ 558156 words of memory out of 5000000
+ 28108 multiletter control sequences out of 15000+600000
  60258 words of font info for 59 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  49i,19n,63p,10405b,764s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HighRateBeamTelescope.pdf (29 pages).
+Output written on HighRateBeamTelescope.pdf (37 pages).

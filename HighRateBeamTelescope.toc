@@ -8,12 +8,13 @@
 \beamer@subsectionintoc {2}{4}{Setups}{9}{0}{2}
 \beamer@sectionintoc {3}{Datataking}{13}{0}{3}
 \beamer@subsectionintoc {3}{1}{EUDAQ}{14}{0}{3}
-\beamer@subsectionintoc {3}{2}{Trigger logic}{15}{0}{3}
-\beamer@sectionintoc {4}{Commissioning}{16}{0}{4}
-\beamer@subsectionintoc {4}{1}{Inclusion of the analogue pixel chip}{17}{0}{4}
-\beamer@subsectionintoc {4}{2}{WBC scan}{18}{0}{4}
-\beamer@sectionintoc {5}{Analysis}{19}{0}{5}
-\beamer@subsectionintoc {5}{1}{Alignment}{20}{0}{5}
-\beamer@subsectionintoc {5}{2}{Miscellaneous}{22}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{23}{0}{6}
-\beamer@sectionintoc {7}{Outlook}{25}{0}{7}
+\beamer@subsectionintoc {3}{2}{Trigger}{15}{0}{3}
+\beamer@sectionintoc {4}{Commissioning}{22}{0}{4}
+\beamer@subsectionintoc {4}{1}{WBC scan}{23}{0}{4}
+\beamer@subsectionintoc {4}{2}{Alignment}{25}{0}{4}
+\beamer@sectionintoc {5}{Analysis}{26}{0}{5}
+\beamer@subsectionintoc {5}{1}{Alignment}{26}{0}{5}
+\beamer@subsectionintoc {5}{2}{Miscellaneous}{28}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{30}{0}{6}
+\beamer@sectionintoc {7}{Outlook}{32}{0}{7}
+\beamer@subsectionintoc {8}{2}{Inclusion of the analogue pixel chip}{36}{0}{7}
