@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.24pt}
+\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
@@ -6,14 +6,14 @@
 \headcommand {\sectionentry {1}{Motivation}{3}{Motivation}{0}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\slideentry {1}{0}{3}{3/3}{}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\slideentry {1}{0}{4}{4/4}{}{0}}
+\headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
 \headcommand {\sectionentry {2}{The Telescope}{5}{The Telescope}{0}}
 \headcommand {\beamer@sectionpages {3}{4}}
 \headcommand {\beamer@subsectionpages {3}{4}}
-\headcommand {\slideentry {2}{0}{5}{5/5}{}{0}}
+\headcommand {\slideentry {2}{0}{1}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
 \headcommand {\beamer@subsectionentry {0}{2}{1}{6}{Telescope Module}}\headcommand {\beamer@subsectionpages {5}{5}}
 \headcommand {\slideentry {2}{1}{1}{6/6}{Telescope Module}{0}}
@@ -34,7 +34,7 @@
 \headcommand {\sectionentry {3}{Datataking}{13}{Datataking}{0}}
 \headcommand {\beamer@sectionpages {5}{12}}
 \headcommand {\beamer@subsectionpages {9}{12}}
-\headcommand {\slideentry {3}{0}{4}{13/13}{}{0}}
+\headcommand {\slideentry {3}{0}{1}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{14}{EUDAQ}}\headcommand {\beamer@subsectionpages {13}{13}}
 \headcommand {\slideentry {3}{1}{1}{14/14}{EUDAQ}{0}}
@@ -47,7 +47,7 @@
 \headcommand {\sectionentry {4}{Commissioning}{23}{Commissioning}{0}}
 \headcommand {\beamer@sectionpages {13}{22}}
 \headcommand {\beamer@subsectionpages {15}{22}}
-\headcommand {\slideentry {4}{0}{3}{23/23}{}{0}}
+\headcommand {\slideentry {4}{0}{1}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
 \headcommand {\beamer@subsectionentry {0}{4}{1}{24}{WBC scan}}\headcommand {\beamer@subsectionpages {23}{23}}
 \headcommand {\slideentry {4}{1}{1}{24/24}{WBC scan}{0}}
@@ -73,16 +73,16 @@
 \headcommand {\sectionentry {6}{Conclusion}{31}{Conclusion}{0}}
 \headcommand {\beamer@sectionpages {27}{30}}
 \headcommand {\beamer@subsectionpages {29}{30}}
-\headcommand {\slideentry {6}{0}{3}{31/31}{}{0}}
+\headcommand {\slideentry {6}{0}{1}{31/31}{}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {6}{0}{4}{32/32}{}{0}}
+\headcommand {\slideentry {6}{0}{2}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
 \headcommand {\sectionentry {7}{Outlook}{33}{Outlook}{0}}
 \headcommand {\beamer@sectionpages {31}{32}}
 \headcommand {\beamer@subsectionpages {31}{32}}
-\headcommand {\slideentry {7}{0}{5}{33/33}{}{0}}
+\headcommand {\slideentry {7}{0}{1}{33/33}{}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {7}{0}{6}{34/34}{}{0}}
+\headcommand {\slideentry {7}{0}{2}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\sectionentry {8}{Backup}{35}{Backup}{0}}
 \headcommand {\beamer@sectionpages {33}{34}}
